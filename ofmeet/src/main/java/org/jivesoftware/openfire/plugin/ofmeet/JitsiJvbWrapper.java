@@ -101,7 +101,7 @@ public class JitsiJvbWrapper implements ProcessListener
             "",
             "    websockets {",
             "        server-id = ofmeet",
-            "        enabled = true",
+            "        enabled = \"" + JiveGlobals.getProperty("ofmeet.bridge.ws.channel", "true" ) + "\"",
             "        domain = \"" + JiveGlobals.getProperty( "ofmeet.websockets.domain", domain) + ":" + JiveGlobals.getProperty( "ofmeet.websockets.publicport", public_port) + "\"",
             "        tls = true",
             "    }",
